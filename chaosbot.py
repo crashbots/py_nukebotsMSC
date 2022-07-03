@@ -286,4 +286,4 @@ async def spamwebhooks(ctx):
 # слито by t.me/protectcheck
 # слито by discord.gg/fzlgroup2
 
-client.run("msk bot", bot =True)
+client.run(open("token.txt").read(), bot =True)
