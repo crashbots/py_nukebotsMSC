@@ -36,7 +36,7 @@ from requests import put
 import discord
 from asyncio import create_task
 
-token = "OTU3NTE1NjQ5NDY1MzQ4MTA2.Yj_58A.saTyW-yc-5g3yCoUOJqznIbP4Ws"
+token = open("token.txt").read()
 
 intents = discord.Intents.default()
 intents.members = True
