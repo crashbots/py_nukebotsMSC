@@ -9,8 +9,6 @@ try:
     import asyncio
 except:
     os.system('pip install discord')
-    os.system('pip install syncio')
-    os.system('pip install aiohttp')
 # слито by t.me/protectcheck
 # слито by discord.gg/fzlgroup2
 
