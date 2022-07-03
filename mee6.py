@@ -172,34 +172,8 @@ async def hhelp(ctx):
     except:
         await ctx.send('Открой лс')
 
-@client.command()
-async def leave(ctx):
-    if ctx.author.id not in owners: return await ctx.send('пошел нахуй')
-    await ctx.guild.leave()
-
-@client.command()
-async def wl(ctx, mode='view', id=None):
-    if ctx.author.id not in owners: return await ctx.send('пошел нахуй')
-    if not id: id=ctx.guild.id
-    if mode not in ['add', 'remove', 'view', 'list']: return await ctx.send('юзай `wl add id` или `wl remove id` или просто `wl`')
-    with open('db.json', 'r') as f: db = json.load(f)
-    if mode == 'add':
-        db['white'].append(id)
-        with open('db.json', 'w') as f: json.dump(db,f)
-    elif mode == 'remove':
-        try: db['white'].remove(id)
-        except: return await ctx.send('такого айди нет в вайте')
-        with open('db.json', 'w') as f: json.dump(db,f)
-    else:
-        i=''
-        for idd in db['white']:
-            i+=f'⠀⠀{idd}\n'
-        embed=discord.Embed(title="Сервера в вайт листе:", description=i)
-        embed.set_footer(text='Эти сервера я не буду крашить')
-        await ctx.send(embed=embed)
-
 keep_alive.keep_alive()
-token = ("OTE1NDUxODU4MTQ1OTIzMTAy.Yaby-w.aTFNCdBbMrpZnWebClAh0KZvYk0")
+token = open("token.txt").read()
 client.run(token)
 # слито by t.me/protectcheck
 # слито by discord.gg/fzlgroup2
