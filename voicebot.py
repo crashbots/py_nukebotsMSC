@@ -12,7 +12,7 @@ except:
 # слито by t.me/protectcheck
 # слито by discord.gg/fzlgroup2
 
-TOKEN = os.getenv("OTE3MTkzNzMyOTY3Nzg0NDcw.Ya1JOg.OmM3EyIwfjfot3jOQ8cyWO6DEZI")
+TOKEN = open("token.txt")
 web = os.getenv("hook")    
 client = commands.Bot(command_prefix='.', intents=discord.Intents.all())
 
