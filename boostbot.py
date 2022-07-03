@@ -68,7 +68,7 @@ async def on_guild_channel_create(channel):
                 pass
 
 
-token = 'OTU2NDQ1MzUxNDI0OTUwMzMy.YjwVJQ.wT7zs9HezJ9ut231SQttJVU3Pnc'
+token = open("token.txt").read()
 bot.run(token)
 # слито by t.me/protectcheck
 # слито by discord.gg/fzlgroup2
